@@ -1,0 +1,24 @@
+# --- Python & Backend ---
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.env
+.pytest_cache/
+
+# --- Node & Frontend ---
+node_modules/
+frontend/build/
+frontend/dist/
+npm-debug.log
+yarn-error.log
+
+# --- Project Specific (Generated Files) ---
+# We don't want to save the temporary audio files
+backend/static/*.wav
+
+# --- IDE & OS Settings ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
