@@ -22,3 +22,10 @@ backend/static/*.wav
 .idea/
 .DS_Store
 Thumbs.db
+
+# --- Sprint 2: AI Training Data & Models ---
+backend/data/raw/
+backend/data/processed/
+backend/data/models/
+*.pth
+*.pt

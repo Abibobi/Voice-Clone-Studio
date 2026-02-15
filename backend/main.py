@@ -7,6 +7,8 @@ from rq import Queue
 from rq.job import Job
 from ml.infer_wrapper import process_text_task
 
+from routers import voice
+
 app = FastAPI()
 
 # Enable CORS for Frontend
@@ -19,6 +21,8 @@ app.add_middleware(
 
 # Mount static folder to serve WAV files
 app.mount("/static", StaticFiles(directory="static"), name="static")
+
+app.include_router(voice.router) # Importing the voice router
 
 # Redis connection
 redis_conn = Redis()
